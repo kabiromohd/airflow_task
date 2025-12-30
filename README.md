@@ -90,10 +90,14 @@ Open the Airflow UI via ``` localhost:8080``` and trigger the dag for the sentim
 
 ![Airflow UI](https://github.com/user-attachments/assets/9ed8948b-95ab-4ac2-bbdf-7ce48c8fa8c1)
 
-### 
+### Snowflakes run-time UI
+
+This is a snapshot of the snowflakes UI
 
 ![Snowflakes UI](https://github.com/user-attachments/assets/d181df08-596e-418f-b4b1-884cd72a57e3)
 
-This is a snapshot of the snowflakes UI
+- Reason for choice of Snowflake
+  Snowflake was chosen as the analytical data warehouse for this pipeline due to its scalability, operational simplicity, and strong integration with modern data engineering tools like Apache Airflow. 
+
 
 
