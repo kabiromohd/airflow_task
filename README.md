@@ -27,7 +27,7 @@ When done with the DAG development and would have successfully loaded the data i
 
 1. Objective:
 
-Build a data pipeline that extracts data from a source (CSV, API, or compressed .gz files), transforms it (cleaning, enrichment, hashing), and loads it into a PostgreSQL or Snowflake database.
+Build a data pipeline that extracts data from a source (CSV, API, or compressed .gz files), transforms it (hashing, filtering specific symbols), and loads it into Snowflake database.
 
 Pipeline must handle gracefully, avoid duplicates, and provide monitoring & alerts.
 
@@ -35,7 +35,7 @@ Pipeline must handle gracefully, avoid duplicates, and provide monitoring & aler
 
 - Orchestration: Apache Airflow – for scheduling, retries, logging, and monitoring.
 
-- Extraction: Support for .csv and .gz files from local or remote sources.
+- Extraction: Support for .csv and .gz files from remote sources.
 
 - Transformation: Row hashing for idempotency, filtering specific symbols.
 
@@ -49,13 +49,13 @@ Pipeline must handle gracefully, avoid duplicates, and provide monitoring & aler
 
 - Alerts: Email or Slack alerts on failures.
 
-- Logging: Detailed logging for debugging.
+- Logging: Detailed logging for debugging and code execution milestone
 
 ### Best Practices Implemented
 
 - Idempotence: Each row has a unique_id hash; duplicates are ignored using ON CONFLICT DO NOTHING.
 
-- Retries & Alerts: Tasks retry up to 3 times on failure.
+- Retries & Alerts: Tasks retry up to 2 times on failure.
 
 - Email alerts on failure: 
 
